@@ -40,6 +40,8 @@ jobs:
           file: WebApplication1/Dockerfile
           push: true
           tags: marian199666/argocd-course-webapp:${{ github.sha }}
+#von mir: in Zeile 56 wird das Image tag in values files geupdatet. 
+# Dadurch wird die Änderung automatisch nach dev deployt
   promote-to-dev-environment:
     runs-on: ubuntu-latest
     needs: docker-build-push
